@@ -10,11 +10,11 @@ class Main {
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in);
 		while(true) {
-			System.out.println("Escriba la operacion a realizar por favor: ");
+			System.out.print("Escriba la operacion a realizar por favor: ");
 			String operacion = teclado.nextLine();
-			System.out.println("Ingresa el primer numero por favor: ");
+			System.out.print("Ingresa el primer numero por favor: ");
 			String numero1 = teclado.nextLine();
-			System.out.println("Ingresa el segundo numero por favor: ");
+			System.out.print("Ingresa el segundo numero por favor: ");
 			String numero2= teclado.nextLine();
 			try {
 				if(operacion.equals("suma")) {
