@@ -1,5 +1,9 @@
 package desarrollo_incremental_is2;
 
+/*
+ @author Daniela Montenegro
+*/
+
 public class Multiplicacion {
 	
 	public Suma suma;

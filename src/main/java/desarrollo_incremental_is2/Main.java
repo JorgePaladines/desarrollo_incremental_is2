@@ -5,6 +5,7 @@ class Main {
 		Suma suma = new Suma();
 		Multiplicacion multiplicacion = new Multiplicacion(suma);
 		System.out.println(multiplicacion.multiplicar(5, -1));
-		Resta resta = new Resta();
+		Resta resta = new Resta(suma, multiplicacion);
+		System.out.println(resta.restar(5, -8));
 	}
 }
