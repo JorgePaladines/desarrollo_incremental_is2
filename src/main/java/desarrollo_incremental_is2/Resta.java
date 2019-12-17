@@ -1,5 +1,9 @@
 package desarrollo_incremental_is2;
 
+/*
+@author Miguel Murillo
+*/
+
 public class Resta {
 	
 	public Suma suma;
