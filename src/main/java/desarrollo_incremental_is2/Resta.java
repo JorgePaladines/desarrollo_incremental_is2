@@ -40,10 +40,12 @@ public class Resta {
 					res = suma.sumar(minuendo, sustraendo_neg);
 					return res;
 				}
+				else {
+					//Ambos positivos
+					res = suma.sumar(minuendo, sustraendo);
+					return res;
+				}
 			}
 		}
-		//Ambos positivos
-		res = suma.sumar(minuendo, sustraendo);
-		return res;
 	}
 }
