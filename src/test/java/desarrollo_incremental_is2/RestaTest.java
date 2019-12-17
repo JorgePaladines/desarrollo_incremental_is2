@@ -46,7 +46,7 @@ public class RestaTest {
 	public void testRestar4() {
 		test = mock(Resta.class);
 		when(test.restar(-Double.MAX_VALUE, 1)).thenReturn(-Double.MAX_VALUE-1); 
-		//El assert fallara ya que el valor devuelto se sale del rango del Double
+		//El assert fallara ya que el valor devuelto se sale del rango del tipo Double
 		assertTrue(test.restar(-Double.MAX_VALUE, 1) < -Double.MAX_VALUE);
 	}
 	
@@ -54,7 +54,7 @@ public class RestaTest {
 	public void testRestar5() {
 		test = mock(Resta.class);
 		when(test.restar(Double.MAX_VALUE, -4)).thenReturn(Double.MAX_VALUE+4); 
-		//El assert fallara ya que el valor devuelto se sale del rango del Double
+		//El assert fallara ya que el valor devuelto se sale del rango del tipo Double
 		assertTrue(test.restar(Double.MAX_VALUE, -4) > Double.MAX_VALUE);
 	}
 
