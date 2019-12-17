@@ -44,7 +44,7 @@ public class SumaTest {
 	@Test
 	public void testSumar4() {
 		test = mock(Suma.class);
-		String x = "a"; 
+		String x = "a";
 		String y = "b";
 		double x_num = Double.parseDouble(x);
 		double y_num = Double.parseDouble(y);
@@ -56,14 +56,14 @@ public class SumaTest {
 	@Test
 	public void testSumar5() {
 		test = mock(Suma.class);
-		when(test.sumar(-Double.MAX_VALUE, 1)).thenReturn(-Double.MAX_VALUE+1); 
+		when(test.sumar(-Double.MAX_VALUE, 1)).thenReturn(-Double.MAX_VALUE+1);
 		assertEquals(-Double.MAX_VALUE+1,test.sumar(-Double.MAX_VALUE, 1),0);
 	}
 	
 	@Test
 	public void testSumar6() {
 		test = mock(Suma.class);
-		when(test.sumar(1,-Double.MAX_VALUE)).thenReturn(1-Double.MAX_VALUE); 
+		when(test.sumar(1,-Double.MAX_VALUE)).thenReturn(1-Double.MAX_VALUE);
 		assertEquals(1-Double.MAX_VALUE,test.sumar(1,-Double.MAX_VALUE),0);
 	}
 	
