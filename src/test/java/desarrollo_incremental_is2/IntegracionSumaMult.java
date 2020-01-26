@@ -27,7 +27,7 @@ public class IntegracionSumaMult {
 		//verify(suma).sumar(Math.abs(2), Math.abs(2));
 	}
 	
-	@Test
+	@Test(expected = NumberFormatException.class)
 	public void testIntegracionExcep() {
 		String x = "a";
 		double x_num = Double.parseDouble(x);
