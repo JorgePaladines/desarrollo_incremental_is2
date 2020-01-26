@@ -35,7 +35,7 @@ public class MultiplicacionTest {
 		assertEquals(16.0,test.multiplicar(-4, -4),0);
 	}
 	
-	@Test
+	@Test(expected = NumberFormatException.class)
 	public void testMultiplicar4() {
 		test = mock(Multiplicacion.class);
 		String multiplicando = "a"; 

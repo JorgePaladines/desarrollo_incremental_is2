@@ -24,7 +24,7 @@ public class IntegracionSumaMult {
 		assertEquals(12.0,mult.multiplicar(4, 3), 0);
 		assertEquals(-10.0,mult.multiplicar(5, -2), 0);
 		assertEquals(16.0,mult.multiplicar(-4, -4), 0);
-		//verify(suma).sumar(2, 3);
+		//verify(suma).sumar(Math.abs(2), Math.abs(2));
 	}
 	
 	@Test

@@ -23,7 +23,7 @@ public class Multiplicacion {
 			
 			for (int i=1; i< Math.abs(multiplicador);i++) 
 			{
-				ret=suma.sumar(Math.abs(multiplicando),ret);
+				ret=this.suma.sumar(Math.abs(multiplicando),ret);
 			}
 			/*Positivas*/
 			if((multiplicador>0 && multiplicando>0) || (multiplicador<0 && multiplicando<0)) 

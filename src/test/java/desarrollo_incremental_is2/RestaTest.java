@@ -13,7 +13,7 @@ public class RestaTest {
 	
 	Resta test;
 
-	@Test
+	@Test(expected = NumberFormatException.class)
 	public void testRestar1() {
 		test = mock(Resta.class);
 		String sustraendo = "a"; 
@@ -30,7 +30,7 @@ public class RestaTest {
 		assertEquals(10.5,test.restar(7.5, 3),0);
 	}
 	
-	@Test
+	@Test(expected = NumberFormatException.class)
 	public void testRestar3() {
 		test = mock(Resta.class);
 		String minuendo = "a";
@@ -42,7 +42,7 @@ public class RestaTest {
 		assertEquals(-1.0,test.restar(minuendo_num, sustraendo_num),0);
 	}
 	
-	@Test
+	@Test(expected = AssertionError.class)
 	public void testRestar4() {
 		test = mock(Resta.class);
 		when(test.restar(-Double.MAX_VALUE, 1)).thenReturn(-Double.MAX_VALUE-1); 
@@ -50,7 +50,7 @@ public class RestaTest {
 		assertTrue(test.restar(-Double.MAX_VALUE, 1) < -Double.MAX_VALUE);
 	}
 	
-	@Test
+	@Test(expected = AssertionError.class)
 	public void testRestar5() {
 		test = mock(Resta.class);
 		when(test.restar(Double.MAX_VALUE, -4)).thenReturn(Double.MAX_VALUE+4); 

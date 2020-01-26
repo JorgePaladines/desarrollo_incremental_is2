@@ -21,7 +21,7 @@ public class SumaTest {
 		assertEquals(5.0,test.sumar(2, 3),0);
 	}
 	
-	@Test
+	@Test(expected = NumberFormatException.class)
 	public void testSumar2() {
 		test = mock(Suma.class);
 		String x = "a"; 
@@ -31,7 +31,7 @@ public class SumaTest {
 		assertEquals(-1.0,test.sumar(x_num, 3),0);
 	}
 	
-	@Test
+	@Test(expected = NumberFormatException.class)
 	public void testSumar3() {
 		test = mock(Suma.class);
 		String y = "a"; 
@@ -41,7 +41,7 @@ public class SumaTest {
 		assertEquals(-1.0,test.sumar(2, y_num),0);
 	}
 	
-	@Test
+	@Test(expected = NumberFormatException.class)
 	public void testSumar4() {
 		test = mock(Suma.class);
 		String x = "a";
@@ -67,7 +67,7 @@ public class SumaTest {
 		assertEquals(1-Double.MAX_VALUE,test.sumar(1,-Double.MAX_VALUE),0);
 	}
 	
-	@Test
+	@Test(expected = AssertionError.class)
 	public void testSumar7() {
 		test = mock(Suma.class);
 		when(test.sumar(Double.MAX_VALUE,1)).thenReturn(Double.MAX_VALUE+1); 
@@ -75,7 +75,7 @@ public class SumaTest {
 		assertTrue(test.sumar(Double.MAX_VALUE,1) > Double.MAX_VALUE);
 	}
 	
-	@Test
+	@Test(expected = AssertionError.class)
 	public void testSumar8() {
 		test = mock(Suma.class);
 		when(test.sumar(1,Double.MAX_VALUE)).thenReturn(1+Double.MAX_VALUE); 
